@@ -1,0 +1,39 @@
+				<div id="content">
+					<div class="row">
+						<div class="col-sm-3">
+							
+							<div class="graph">
+
+								<h1>Timeline</h1>
+
+								<div class="timeline">
+
+									<div class="timeslot {{$index % 2 == 0 ? '' : 'alt'}}" ng-repeat="timeslotObj in timelineData">
+
+										<div class="task">
+											<span>
+												<span class="from">{{timeslotObj.from}}</span>
+												<span class="details">
+													{{timeslotObj.body}}
+												</span>
+												<span>
+													{{timeslotObj.date}}	
+												</span> 
+											</span>
+											<div class="arrow"></div>
+										</div>							
+										<div class="icon">
+											<i class="fa fa-{{timeslotObj.type}}"></i>
+										</div>
+										<div class="time">
+											{{timeslotObj.time}}
+										</div>	
+
+									</div>
+
+								</div>
+
+							</div>
+						</div>
+					</div>
+				</div>
